@@ -84,9 +84,9 @@ define([], function() {
       this.audioSource = args.audioSources[0];
       this.audioDestination = args.audioDestinations[0];
       this.context = args.audioContext;
-  		this.gainDNode = this.context.createGainNode();
+      this.gainDNode = this.context.createGainNode();
       this.gainINode = this.context.createGainNode();
-      this.lpFilter = context.createBiquadFilter();
+      this.lpFilter = this.context.createBiquadFilter();
       lowpassFilter.type = lowpassFilter.LOWPASS; // explicitly set type
       lowpassFilter.frequency.value = 20000;
       this.delayNode = createJavaScriptNode(1024, 1, 1);
