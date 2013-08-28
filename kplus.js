@@ -127,8 +127,8 @@ define([], function() {
       else {
           /* Use default data */
           this.pluginState = {
-              delay: pluginConf.hostParameters.parameters.delay.range.default,
-              gain: pluginConf.hostParameters.parameters.gain.range.default
+              freq: pluginConf.hostParameters.parameters.freq.range.default,
+              feedback: pluginConf.hostParameters.parameters.feedback.range.default
           };
       }
 
