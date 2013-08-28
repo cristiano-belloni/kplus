@@ -41,7 +41,7 @@ define([], function() {
 
     SampleDelay.prototype.setDelayInSamples = function(delayInSamples) {
       
-      this.delayInSamples = Math.round(delayInSamples);
+      this.delayInSamples = delayInSamples;
       this.delayInputPointer = this.delayOutputPointer + delayInSamples;
 
       if (this.delayInputPointer >= this.delayBufferSamples.length-1) {
@@ -111,8 +111,7 @@ define([], function() {
       var onParmChange = function (id, value) {
         this.pluginState[id] = value;
         if (id === 'freq') {
-          //this.gainDuplicatorNodes[0].gain.value = value;
-          var N = this.context.sampleRate / value;
+          var N = Math.round(this.context.sampleRate / value);
           this.delayProcessor.setDelayInSamples(N);
         }
         else if (id === 'feedback') {
