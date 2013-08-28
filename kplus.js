@@ -89,7 +89,7 @@ define([], function() {
       this.lpFilter = this.context.createBiquadFilter();
       this.lpFilter.type = this.lpFilter.LOWPASS; // explicitly set type
       this.lpFilter.frequency.value = 20000;
-      this.delayNode = createJavaScriptNode(1024, 1, 1);
+      this.delayNode = this.context.createJavaScriptNode(1024, 1, 1);
       this.delayProcessor = new SampleDelay (1024, 512)
 
       this.delayProcessor.onaudioprocess = function (e) {
