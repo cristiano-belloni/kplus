@@ -96,7 +96,7 @@ define([], function() {
 
         var outBuffer = e.outputBuffer.getChannelData(0);
         var inBuffer = e.inputBuffer.getChannelData(0);
-        this.delayNode.process (inBufferL, outBuffer);
+        this.delayNode.process (inBuffer, outBuffer);
 
       }.bind(this);
 
