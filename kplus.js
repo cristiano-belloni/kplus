@@ -87,8 +87,8 @@ define([], function() {
       this.gainDNode = this.context.createGainNode();
       this.gainINode = this.context.createGainNode();
       this.lpFilter = this.context.createBiquadFilter();
-      lowpassFilter.type = lowpassFilter.LOWPASS; // explicitly set type
-      lowpassFilter.frequency.value = 20000;
+      this.lowpassFilter.type = this.lowpassFilter.LOWPASS; // explicitly set type
+      this.lowpassFilter.frequency.value = 20000;
       this.delayNode = createJavaScriptNode(1024, 1, 1);
       this.delayProcessor = new SampleDelay (1024, 512)
 
