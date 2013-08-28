@@ -82,7 +82,7 @@ define([], function() {
       this.name = args.name;
       this.id = args.id;
       this.audioSource = args.audioSources[0];
-      this.audioDestination = args.audioDestination[0];
+      this.audioDestination = args.audioDestinations[0];
       this.context = args.audioContext;
   		this.gainDNode = this.context.createGainNode();
       this.gainINode = this.context.createGainNode();
