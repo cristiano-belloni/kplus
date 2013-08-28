@@ -92,7 +92,7 @@ define([], function() {
       this.delayNode = this.context.createJavaScriptNode(1024, 1, 1);
       this.delayProcessor = new SampleDelay (1024, 512)
 
-      this.delayProcessor.onaudioprocess = function (e) {
+      this.delayNode.onaudioprocess = function (e) {
 
         var outBuffer = e.outputBuffer.getChannelData(0);
         var inBuffer = e.inputBuffer.getChannelData(0);
